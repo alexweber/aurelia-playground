@@ -1,8 +1,8 @@
 export class Welcome {
   constructor() {
-    this.chamada = 'Seja bem vindo ao inferno seu canalha!';
-    this.firstName = 'João';
-    this.lastName = 'Silva';
+    this.heading = 'Welcome to Aurelia!';
+    this.firstName = 'John';
+    this.lastName = 'Smith';
   }
 
   get fullName() {
@@ -10,6 +10,6 @@ export class Welcome {
   }
 
   welcome() {
-    alert(`Bem vindo, ${this.fullName}, seu otário!`);
+    alert(`Yo, ${this.fullName}!`);
   }
 }
