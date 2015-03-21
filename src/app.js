@@ -24,11 +24,17 @@ export class App {
           title: 'Welcome to flickr'
         },
         {
-          route: 'child-router',
-          moduleId: 'child-router',
+          router: 'todo',
+          moduleId: 'todo/todo',
           nav: true,
-          title: 'Child Router'
+          title: 'ToDo'
         }
+        //{
+        //  route: 'child-router',
+        //  moduleId: 'child-router',
+        //  nav: true,
+        //  title: 'Child Router'
+        //}
       ]);
     });
   }
