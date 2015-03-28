@@ -1,0 +1,10 @@
+<template>
+  <strong>${item.title}</strong>
+  <p>${item.desc}</p>
+
+  <button click.delegate="doComplete()" if.bind="!item.status" type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Set complete</button>
+
+  <button click.delegate="doIncomplete()" if.bind="item.status" type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Set incomplete</button>
+</template>

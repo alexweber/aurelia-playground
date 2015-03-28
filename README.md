@@ -8,9 +8,11 @@ This is the companion repo for a series of streams @ [Livecoding.tv](http://bit.
 
 [x] Update to latest Aurelia release 0.10.0
 [x] Get through Getting Started guide again
-[ ] Add "ToDo" page listing items
-[ ] Use a custom element to make it cooler
-[ ] Details page
-[ ] Mark an item as complete
+[x] Add "ToDo" page listing items
+[x] Use a custom element to make it cooler
+[x] Add items!
+[x] Implement "Task" class just cause
+[x] Mark an item as complete
 [ ] Filter complete items
+[ ] Details page
 [ ] Add priorities & sort by them

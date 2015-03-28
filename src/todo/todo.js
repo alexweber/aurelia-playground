@@ -1,3 +1,5 @@
+import { TodoTask } from "../task/task";
+
 export class Todo {
   static inject() {
     return [];
@@ -7,19 +9,25 @@ export class Todo {
     // $scope.
     this.heading = 'ToDo List';
     this.items = [];
+
+    // Init add form.
+    this.newTitle = '';
+    this.newDesc = '';
+  }
+
+  // Submit handler.
+  addTask() {
+    this.items.push(new TodoTask(this.newTitle, this.newDesc));
+    this.newTitle = '';
+    this.newDesc = '';
   }
 
   activate() {
     // Equivalent to angular ui router resolve
     this.items = [
-      {
-        id: 1,
-        title: 'Learn Aurelia'
-      },
-      {
-        id: 2,
-        title: 'Learn Angular 2?'
-      }
+      new TodoTask('Start stream', 'Hey :)', true),
+      new TodoTask('Learn Aurelia', 'Lorem ipsum'),
+      new TodoTask('Build App', 'Lorem ipsum')
     ]
   }
 }

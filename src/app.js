@@ -19,22 +19,21 @@ export class App {
           nav: true,
           title: 'Welcome'
         },
-        {
-          route: 'flickr',
-          moduleId: './flickr/flickr',
-          nav: true
-        },
+        //{
+        //  route: 'flickr',
+        //  moduleId: './flickr/flickr',
+        //  nav: true
+        //},
         {
           route: 'todo',
           moduleId: './todo/todo',
           nav: true
         },
-        //{
-        //  route: 'child-router',
-        //  moduleId: './child-router',
-        //  nav: false,
-        //  title: 'Child Router'
-        //}
+        {
+          route: 'todo/add',
+          moduleId: './todo/add',
+          nav: true
+        }
       ]);
     });
   }

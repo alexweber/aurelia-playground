@@ -1,10 +1,31 @@
 <template>
+  <require from='./todo-item'></require>
+
   <section>
     <h2>${heading}</h2>
+
     <div class="list-group">
-      <a repeat.for="item of items" href.bind="item.id" class="list-group-item">
-        ${item.title}
-      </a>
+      <div repeat.for="item of items"
+           class="list-group-item ${item.status ? 'list-group-item-success' : 'list-group-item-warning'}">
+        <todo-item item.bind="item"></todo-item>
+      </div>
     </div>
+  </section>
+
+  <section>
+    <form role="form" submit.delegate="addTask()" novalidate>
+      <h3>Add Task</h3>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" value.bind="newTitle" class="form-control" id="title" placeholder="compelling title">
+      </div>
+      <div class="form-group">
+        <label for="desc">Description</label>
+        <textarea id="desc" value.bind="newDesc" class="form-control" placeholder="meaningful description"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
   </section>
 </template>
