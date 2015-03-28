@@ -1,9 +1,12 @@
 <template>
-  <import from="./nav-bar/nav-bar"></import>
+  <require from='./nav-bar/nav-bar'></require>
+  <require from='./copyright/copyright-notice'></require>
 
-  <foo-nav-bar router.bind="router"></foo-nav-bar>
+  <nav-bar router.bind="router"></nav-bar>
 
   <div class="page-host">
     <router-view></router-view>
+
+    <copyright-notice name="John Doe"></copyright-notice>
   </div>
 </template>

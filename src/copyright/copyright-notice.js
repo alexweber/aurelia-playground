@@ -1,7 +1,7 @@
 import {Behavior} from 'aurelia-framework';
 
-export class NavBar {
+export class CopyrightNotice {
   static metadata() {
-    return Behavior.withProperty('router');
+    return Behavior.withProperty('name');
   }
 }
