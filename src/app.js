@@ -1,38 +1,38 @@
 import {Router} from 'aurelia-router';
+import bootstrap from 'bootstrap';
 
 export class App {
   static inject() {
-    return [Router];
+    return [Router, bootstrap];
   }
 
-  constructor(router) {
-    this.router = router;
+  constructor(router, bootstrap) {
+    this.bootstrap = bootstrap; // ?
 
+    this.router = router;
     this.router.configure(config => {
       config.title = 'Aurelia';
       config.map([
         {
           route: ['', 'welcome'],
-          moduleId: 'welcome/welcome',
+          moduleId: './welcome',
           nav: true,
-          title: 'Welcome :)'
+          title: 'Welcome'
         },
         {
           route: 'flickr',
-          moduleId: 'flickr/flickr',
-          nav: true,
-          title: 'Welcome to flickr'
+          moduleId: './flickr/flickr',
+          nav: true
         },
         {
-          router: 'todo',
-          moduleId: 'todo/todo',
-          nav: true,
-          title: 'ToDo'
-        }
+          route: 'todo',
+          moduleId: './todo/todo',
+          nav: true
+        },
         //{
         //  route: 'child-router',
-        //  moduleId: 'child-router',
-        //  nav: true,
+        //  moduleId: './child-router',
+        //  nav: false,
         //  title: 'Child Router'
         //}
       ]);

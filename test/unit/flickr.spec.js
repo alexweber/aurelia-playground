@@ -1,4 +1,4 @@
-import {Flickr} from '../../src/flickr';
+import {Flickr} from '../../src/flickr/flickr';
 
 class HttpStub {
   jsonp(url) {

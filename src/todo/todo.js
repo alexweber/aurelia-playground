@@ -1,33 +1,25 @@
-export class ToDo {
+export class Todo {
   static inject() {
     return [];
   }
 
   constructor() {
-    this.pageTitle = 'My ToDo list';
+    // $scope.
+    this.heading = 'ToDo List';
+    this.items = [];
+  }
 
-    // @TODO use a service or whatever the aurelia equivalent is! :)
-    this.tasks = [
+  activate() {
+    // Equivalent to angular ui router resolve
+    this.items = [
       {
-        title: 'Learn Aurelia',
-        complete: false,
-        description: 'Lorem ipsum bla bla'
+        id: 1,
+        title: 'Learn Aurelia'
       },
       {
-        title: 'Buy milk',
-        complete: false,
-        description: 'Preferrably bovine.'
-      },
-      {
-        title: 'Pick up kids from school',
-        complete: false,
-        description: "By 5 o clock or else you're in trouble mister"
-      },
-      {
-        title: 'Buy dogfood',
-        complete: false,
-        description: 'Lest he starve.'
+        id: 2,
+        title: 'Learn Angular 2?'
       }
-    ];
+    ]
   }
 }
