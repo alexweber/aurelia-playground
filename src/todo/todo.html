@@ -1,0 +1,10 @@
+<template>
+  <section>
+    <h2>${heading}</h2>
+    <div class="list-group">
+      <a repeat.for="item of items" href.bind="item.id" class="list-group-item">
+        ${item.title}
+      </a>
+    </div>
+  </section>
+</template>
